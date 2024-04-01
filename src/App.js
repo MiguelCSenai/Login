@@ -12,7 +12,7 @@ function App() {
 
       <div class="MainDivLogin">
 
-        <img src={logo} alt='logo' class="logo"/>
+        <img src={logo} alt='logo' class="logo" draggable="false"/>
 
         <h1 class="titulo">The Final Touch</h1>
 
@@ -33,7 +33,7 @@ function App() {
 
           <div class="btnLogin">
 
-            <input type="submit" value="Login" class="Login"></input>
+            <input type="submit" value="Log in" class="Login"></input>
           
           </div>
 
