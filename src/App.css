@@ -83,7 +83,7 @@ body, .bodycontainer{
     background: linear-gradient(127deg, rgba(8,7,32,1) 0%, rgba(34,34,55,1) 22%, rgba(28,29,29,1) 66%, rgba(2,9,43,1) 100%);
     width: 90%;
     max-width: 700px;
-    height: 90vh;
+    height: 95vh;
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -113,8 +113,8 @@ form{
 
    position: relative;
    width: 70%;
-   height: 8%;
-   margin-bottom: 5vh;
+   height: 6vh;
+   margin-bottom: 4.5vh;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -131,38 +131,28 @@ form{
    min-height: 2pc ;
    padding-left: 15px;
    color: white;
-   font-size: 1.7vh;
+   font-size: 3vh;
    transition: border ease .4s;
 
 }
 
 .desativado{
 
-  position: absolute;
-  top: 30%;
-  left: 3%;
-  color: rgb(106, 106, 106);
-  font-size: 1.7vh;
-  transition: top 0.3s, font-size 0.3s, color 0.5s;
-  pointer-events: none;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    color: rgb(106, 106, 106);
+    font-size: 3vh;
+    transition: top 0.3s, font-size 0.3s, color 0.5s;
+    pointer-events: none;
 
 }
 
 input:focus + label{
 
-    top: -65%;
-    font-size: 1.5vh;
-    color: white;
-
-}
-
-.ativado{
-
-  position: absolute;
-  top: -65%;
-  left: 3%;
-  font-size: 1.5vh;
-  color: white;
+    top: -25px;
+    font-size: 1.3vh;
+    color: white; 
 
 }
 
@@ -176,7 +166,7 @@ input:focus + label{
 
   background-color: white;
   width: 70%;
-  height: 12%;
+  height: 20%;
   border: 2px solid #2c2c2c;
   border-radius: 60px;
   margin-top: 3vh;
@@ -188,7 +178,7 @@ input:focus + label{
 
   background-color: #2c2c2c;
   width: 70%;
-  height: 12%;
+  height: 20%;
   border: 2px solid white;
   border-radius: 60px;
   margin-top: 4vh;
