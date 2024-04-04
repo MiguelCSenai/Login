@@ -1,19 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Reddit+Mono:wght@200..900&display=swap');
 .App {
   text-align: center;
 }
 
-body{
+.oswald-small {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1pc;
+}
+.oswald-medium {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1pc;
+}
+.oswald-large {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.3pc;
+}
+.reddit-mono-small {
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: .5pc;
+}
 
-    background-color: #282c34;
-    min-height: 97.857vh;
+.reddit-mono-medium {
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1pc;
+}
+
+.reddit-mono-large {
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 2pc;
+}
+
+body, .bodycontainer{
+
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.bodycontainer{
+
+    background-image: url("./Imagens/gifFundo.gif");
+    background-size: cover;
+    filter: blur(8px);
+    position: absolute;
+    z-index: -1;
 
 }
 
@@ -21,12 +74,13 @@ body{
 
   color: white;
   margin-bottom: 8vh;
+  margin-top: 0;
 
 }
 
 .MainDivLogin{
 
-    background-color: rgb(19, 20, 34);
+    background: linear-gradient(127deg, rgba(8,7,32,1) 0%, rgba(34,34,55,1) 22%, rgba(28,29,29,1) 66%, rgba(2,9,43,1) 100%);
     width: 90%;
     max-width: 700px;
     height: 90vh;
@@ -34,7 +88,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 3pc;
+    border-radius: 110px 30px 90px 50px;
     border: 2px solid rgb(255, 255, 255);
 
 }
@@ -50,11 +104,8 @@ form{
 
 .logo{
 
-   width: 15%;
-   margin-top: 7vh;
-   margin-bottom: 3vh;
-   border-radius: 30%;
-   border: 2px solid #282c34;
+   width: 25%;
+   margin-top: 1.5vh;
 
 }
 
@@ -74,7 +125,7 @@ form{
 
    background-color: #282c34;
    border: 1px solid rgb(181, 181, 181);
-   border-radius: 1pc;
+   border-radius: 54px 207px 54px 197px;
    width: 97%;
    height: 100%;
    min-height: 2pc ;
@@ -85,25 +136,36 @@ form{
 
 }
 
-label{
+.desativado{
 
-    position: absolute;
-    top: 30%;
-    left: 4%;
-    color: rgb(106, 106, 106);
-    font-size: 1.7vh;
-    transition: top 0.3s, font-size 0.3s, color 0.5s;
-    pointer-events: none;
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  color: rgb(106, 106, 106);
+  font-size: 1.7vh;
+  transition: top 0.3s, font-size 0.3s, color 0.5s;
+  pointer-events: none;
+
+}
+
+input:focus + label{
+
+    top: -65%;
+    font-size: 1.5vh;
+    color: white;
 
 }
 
-input:focus + label, input:valid + label{
+.ativado{
 
-    top: -25px;
-    font-size: 1.3vh;
-    color: white; 
+  position: absolute;
+  top: -65%;
+  left: 3%;
+  font-size: 1.5vh;
+  color: white;
 
 }
+
 .TextInput:focus{
 
   outline: none;
@@ -165,7 +227,6 @@ input:focus + label, input:valid + label{
   border: none;
   cursor: pointer;
   transition: color .3s;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: bold;
 
@@ -180,7 +241,6 @@ input:focus + label, input:valid + label{
   border: none;
   cursor: pointer;
   transition: color .3s;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: bold;
 

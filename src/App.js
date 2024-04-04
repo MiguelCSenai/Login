@@ -1,7 +1,21 @@
+import { useState } from 'react';
 import './App.css';
-import logo from './Imagens/Logo.jpg'
+import logo from './Imagens/Logo.png'
 
 function App() {
+
+  const [inputValue, setInputValue] = useState('');
+
+      const handleInputChange = (event) => {
+        setInputValue(event.target.value); // Atualiza o valor do campo de entrada
+      };
+
+  const [inputValue2, setInputValue2] = useState('');
+
+      const handleInputChange2 = (event) => {
+        setInputValue2(event.target.value); // Atualiza o valor do campo de entrada
+      };
+
   return (
 
     <>
@@ -10,24 +24,26 @@ function App() {
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+      <div class="bodycontainer"></div>
+
       <div class="MainDivLogin">
 
         <img src={logo} alt='logo' class="logo"/>
 
-        <h1 class="titulo">The Final Touch</h1>
+        <h1 class="titulo oswald-large">The Final Touch</h1>
 
         <form>
 
-        <div class="InputContainer">
+        <div class="InputContainer reddit-mono-medium">
 
-          <input type="email" name="user" id="EmailInput" class="TextInput" required="true"/>
-          <label for="EmailInput">Email ou nome de usuário</label>
+          <input type="email" name="user" id="EmailInput" class="TextInput" required="true" onChange={handleInputChange}/>
+          <label for="EmailInput" className={inputValue !== '' ? "ativado" : "desativado"}>Email ou nome de usuário</label>
 
         </div>
-        <div class="InputContainer"> 
+        <div class="InputContainer reddit-mono-medium"> 
 
-          <input type="password" name="senha" id="PassInput" class="TextInput"required="true"/>
-          <label for="PassInput">Senha</label>
+          <input type="password" name="senha" id="PassInput" class="TextInput"required="true" onChange={handleInputChange2}/>
+          <label for="PassInput" className={inputValue2 !== '' ? "ativado" : "desativado"}>Senha</label>
 
         </div>
 
@@ -47,6 +63,7 @@ function App() {
 
 
         </div>
+
 
       </body>
 
