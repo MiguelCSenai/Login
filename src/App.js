@@ -20,42 +20,42 @@ function App() {
 
     <>
 
-    <body>
+    <div className='body'>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      <div class="bodycontainer"></div>
+      <div className="bodycontainer"></div>
 
-      <div class="MainDivLogin">
+      <div className="MainDivLogin">
 
-        <img src={logo} alt='logo' class="logo" draggable="false"/>
+        <img src={logo} alt='logo' className="logo" draggable="false"/>
 
-        <h1 class="titulo oswald-large">The Final Touch</h1>
+        <h1 className="titulo oswald-large">The Final Touch</h1>
 
         <form>
 
-        <div class="InputContainer reddit-mono-medium">
+        <div className="InputContainer reddit-mono-medium">
 
-          <input type="email" name="user" id="EmailInput" class="TextInput" required="true" onChange={handleInputChange}/>
-          <label for="EmailInput" className={inputValue !== '' ? "ativado" : "desativado"}>Email ou nome de usuário</label>
-
-        </div>
-        <div class="InputContainer reddit-mono-medium"> 
-
-          <input type="password" name="senha" id="PassInput" class="TextInput"required="true" onChange={handleInputChange2}/>
-          <label for="PassInput" className={inputValue2 !== '' ? "ativado" : "desativado"}>Senha</label>
+          <input type="email" name="user" id="EmailInput" className="TextInput" required={true} onChange={handleInputChange}/>
+          <label htmlFor="EmailInput" className={inputValue !== '' ? "ativado" : "desativado"}>Email ou nome de usuário</label>
 
         </div>
+        <div className="InputContainer reddit-mono-medium"> 
 
-          <div class="btnLogin">
+          <input type="password" name="senha" id="PassInput" className="TextInput"required={true} onChange={handleInputChange2}/>
+          <label htmlFor="PassInput" className={inputValue2 !== '' ? "ativado" : "desativado"}>Senha</label>
 
-            <input type="submit" value="Log in" class="Login"></input>
-          
+        </div>
+
+          <div className="btnLogin">
+
+            <input type="submit" value="Log in" className="Login"></input>
+                      
           </div>
 
-          <div class="btnSignin">
+          <div className="btnSignin">
 
-            <input type="submit" value="Sign in" class="Signin"></input>
+            <input type="submit" value="Signin" className="Signin"></input>
           
           </div>
 
@@ -65,7 +65,7 @@ function App() {
         </div>
 
 
-      </body>
+      </div>
 
       </>
   );
